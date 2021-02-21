@@ -81,6 +81,6 @@ class Subpixel(Conv2D):
         config = super(Conv2D, self).get_config()
         config.pop('rank')
         config.pop('dilation_rate')
-        config['filters'] = int(config['filters'] / self.r*self.r)
+        config['filters'] = int(config['filters'] / (self.r*self.r))
         config['r'] = self.r
         return config
