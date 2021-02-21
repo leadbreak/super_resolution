@@ -1,8 +1,8 @@
 import numpy as np
-import keras
+import tensorflow.keras
 import cv2, os
 
-class DataGenerator(keras.utils.Sequence):
+class DataGenerator(tensorflow.keras.utils.Sequence):
     'Generates data for Keras'
     def __init__(self, list_IDs, labels, batch_size=32, dim=(32,32,32), n_channels=1,
                  n_classes=10, shuffle=True):
